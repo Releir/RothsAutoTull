@@ -79,6 +79,15 @@ namespace RothsAutoTull
             this.upperHgKey = new System.Windows.Forms.ComboBox();
             this.armorEnabled = new System.Windows.Forms.CheckBox();
             this.armorKey = new System.Windows.Forms.ComboBox();
+            this.saveKeyBtn = new System.Windows.Forms.Button();
+            this.cursedEnabled = new System.Windows.Forms.CheckBox();
+            this.cursedKey = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.speedEnabled = new System.Windows.Forms.CheckBox();
+            this.speedKey = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -280,6 +289,14 @@ namespace RothsAutoTull
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.speedEnabled);
+            this.groupBox2.Controls.Add(this.speedKey);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.cursedEnabled);
+            this.groupBox2.Controls.Add(this.cursedKey);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.holyEnabled);
             this.groupBox2.Controls.Add(this.holyKey);
             this.groupBox2.Controls.Add(this.label13);
@@ -305,7 +322,7 @@ namespace RothsAutoTull
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(12, 200);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 316);
+            this.groupBox2.Size = new System.Drawing.Size(565, 325);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Item Buffs";
@@ -513,7 +530,7 @@ namespace RothsAutoTull
             // crusaderBuffEnabled
             // 
             this.crusaderBuffEnabled.AutoSize = true;
-            this.crusaderBuffEnabled.Location = new System.Drawing.Point(305, 56);
+            this.crusaderBuffEnabled.Location = new System.Drawing.Point(341, 10);
             this.crusaderBuffEnabled.Name = "crusaderBuffEnabled";
             this.crusaderBuffEnabled.Size = new System.Drawing.Size(141, 19);
             this.crusaderBuffEnabled.TabIndex = 6;
@@ -523,7 +540,7 @@ namespace RothsAutoTull
             // shieldEnabled
             // 
             this.shieldEnabled.AutoSize = true;
-            this.shieldEnabled.Location = new System.Drawing.Point(316, 200);
+            this.shieldEnabled.Location = new System.Drawing.Point(615, 68);
             this.shieldEnabled.Name = "shieldEnabled";
             this.shieldEnabled.Size = new System.Drawing.Size(58, 19);
             this.shieldEnabled.TabIndex = 7;
@@ -533,7 +550,7 @@ namespace RothsAutoTull
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(305, 166);
+            this.label14.Location = new System.Drawing.Point(615, 32);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(140, 15);
             this.label14.TabIndex = 8;
@@ -542,7 +559,7 @@ namespace RothsAutoTull
             // weaponEnabled
             // 
             this.weaponEnabled.AutoSize = true;
-            this.weaponEnabled.Location = new System.Drawing.Point(316, 231);
+            this.weaponEnabled.Location = new System.Drawing.Point(615, 99);
             this.weaponEnabled.Name = "weaponEnabled";
             this.weaponEnabled.Size = new System.Drawing.Size(70, 19);
             this.weaponEnabled.TabIndex = 9;
@@ -552,7 +569,7 @@ namespace RothsAutoTull
             // upperEnabled
             // 
             this.upperEnabled.AutoSize = true;
-            this.upperEnabled.Location = new System.Drawing.Point(316, 260);
+            this.upperEnabled.Location = new System.Drawing.Point(615, 128);
             this.upperEnabled.Name = "upperEnabled";
             this.upperEnabled.Size = new System.Drawing.Size(78, 19);
             this.upperEnabled.TabIndex = 10;
@@ -562,7 +579,7 @@ namespace RothsAutoTull
             // shieldKey
             // 
             this.shieldKey.FormattingEnabled = true;
-            this.shieldKey.Location = new System.Drawing.Point(399, 198);
+            this.shieldKey.Location = new System.Drawing.Point(698, 66);
             this.shieldKey.Name = "shieldKey";
             this.shieldKey.Size = new System.Drawing.Size(46, 23);
             this.shieldKey.TabIndex = 11;
@@ -570,7 +587,7 @@ namespace RothsAutoTull
             // weaponKey
             // 
             this.weaponKey.FormattingEnabled = true;
-            this.weaponKey.Location = new System.Drawing.Point(400, 227);
+            this.weaponKey.Location = new System.Drawing.Point(699, 95);
             this.weaponKey.Name = "weaponKey";
             this.weaponKey.Size = new System.Drawing.Size(46, 23);
             this.weaponKey.TabIndex = 12;
@@ -578,7 +595,7 @@ namespace RothsAutoTull
             // upperHgKey
             // 
             this.upperHgKey.FormattingEnabled = true;
-            this.upperHgKey.Location = new System.Drawing.Point(400, 256);
+            this.upperHgKey.Location = new System.Drawing.Point(699, 124);
             this.upperHgKey.Name = "upperHgKey";
             this.upperHgKey.Size = new System.Drawing.Size(46, 23);
             this.upperHgKey.TabIndex = 13;
@@ -586,7 +603,7 @@ namespace RothsAutoTull
             // armorEnabled
             // 
             this.armorEnabled.AutoSize = true;
-            this.armorEnabled.Location = new System.Drawing.Point(316, 290);
+            this.armorEnabled.Location = new System.Drawing.Point(615, 158);
             this.armorEnabled.Name = "armorEnabled";
             this.armorEnabled.Size = new System.Drawing.Size(60, 19);
             this.armorEnabled.TabIndex = 14;
@@ -596,16 +613,97 @@ namespace RothsAutoTull
             // armorKey
             // 
             this.armorKey.FormattingEnabled = true;
-            this.armorKey.Location = new System.Drawing.Point(400, 286);
+            this.armorKey.Location = new System.Drawing.Point(699, 154);
             this.armorKey.Name = "armorKey";
             this.armorKey.Size = new System.Drawing.Size(46, 23);
             this.armorKey.TabIndex = 15;
+            // 
+            // saveKeyBtn
+            // 
+            this.saveKeyBtn.Location = new System.Drawing.Point(242, 531);
+            this.saveKeyBtn.Name = "saveKeyBtn";
+            this.saveKeyBtn.Size = new System.Drawing.Size(94, 29);
+            this.saveKeyBtn.TabIndex = 16;
+            this.saveKeyBtn.Text = "Save Keys";
+            this.saveKeyBtn.UseVisualStyleBackColor = true;
+            this.saveKeyBtn.Click += new System.EventHandler(this.saveKeyBtn_Click);
+            // 
+            // cursedEnabled
+            // 
+            this.cursedEnabled.AutoSize = true;
+            this.cursedEnabled.Location = new System.Drawing.Point(474, 48);
+            this.cursedEnabled.Name = "cursedEnabled";
+            this.cursedEnabled.Size = new System.Drawing.Size(15, 14);
+            this.cursedEnabled.TabIndex = 29;
+            this.cursedEnabled.UseVisualStyleBackColor = true;
+            // 
+            // cursedKey
+            // 
+            this.cursedKey.FormattingEnabled = true;
+            this.cursedKey.Location = new System.Drawing.Point(362, 46);
+            this.cursedKey.Name = "cursedKey";
+            this.cursedKey.Size = new System.Drawing.Size(69, 23);
+            this.cursedKey.TabIndex = 28;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(457, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(49, 15);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Enabled";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(385, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(26, 15);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Key";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(271, 51);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 15);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "CursedWater";
+            // 
+            // speedEnabled
+            // 
+            this.speedEnabled.AutoSize = true;
+            this.speedEnabled.Location = new System.Drawing.Point(474, 84);
+            this.speedEnabled.Name = "speedEnabled";
+            this.speedEnabled.Size = new System.Drawing.Size(15, 14);
+            this.speedEnabled.TabIndex = 32;
+            this.speedEnabled.UseVisualStyleBackColor = true;
+            // 
+            // speedKey
+            // 
+            this.speedKey.FormattingEnabled = true;
+            this.speedKey.Location = new System.Drawing.Point(362, 82);
+            this.speedKey.Name = "speedKey";
+            this.speedKey.Size = new System.Drawing.Size(69, 23);
+            this.speedKey.TabIndex = 31;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(271, 87);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 15);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "SpeedPots";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 572);
+            this.ClientSize = new System.Drawing.Size(821, 567);
+            this.Controls.Add(this.saveKeyBtn);
             this.Controls.Add(this.armorKey);
             this.Controls.Add(this.armorEnabled);
             this.Controls.Add(this.upperHgKey);
@@ -685,6 +783,15 @@ namespace RothsAutoTull
         private System.Windows.Forms.ComboBox upperHgKey;
         private System.Windows.Forms.CheckBox armorEnabled;
         private System.Windows.Forms.ComboBox armorKey;
+        private System.Windows.Forms.Button saveKeyBtn;
+        private System.Windows.Forms.CheckBox speedEnabled;
+        private System.Windows.Forms.ComboBox speedKey;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.CheckBox cursedEnabled;
+        private System.Windows.Forms.ComboBox cursedKey;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }
 

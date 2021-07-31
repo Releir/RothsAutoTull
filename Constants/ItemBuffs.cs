@@ -6,5 +6,7 @@
     Thunderproof = 911,
     Aloevera = 0,
     Resentment = 150,
-    HolyScroll = 18
+    HolyScroll = 18,
+    SpeedPots = 41,
+    CursedWater = 904
 }
