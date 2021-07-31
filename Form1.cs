@@ -11,6 +11,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BuffHelper;
+using KeyHelper;
 
 namespace RothsAutoTull
 {
@@ -22,7 +24,6 @@ namespace RothsAutoTull
         const uint WM_KEYDOWN = 0x100;
         const uint WM_KEYUP = 0x101;
         const uint WM_CHAR = 0x102;
-        const int VK_F9 = 0x78;
 
         const int PROCESS_WM_READ = 0x0010;
         [DllImport("kernel32.dll")]
@@ -52,9 +53,27 @@ namespace RothsAutoTull
             CheckForIllegalCrossThreadCalls = false;  //Not good but it serves the purpose of just getting and not writing
             InitializeComponent();
             LoadProcesses();
-            LoadKeys(hpKeyBox);
-            LoadKeys(spKeyBox);
-            LoadKeys(panaceaBox);
+            List<ComboBox> keyComboList = new List<ComboBox>()
+            {
+                hpKeyBox,
+                spKeyBox,
+                panaceaBox,
+                fireProofKey,
+                coldProofKey,
+                thunderProofKey,
+                earthProofKey,
+                aloeKey,
+                resentKey,
+                holyKey,
+                shieldKey,
+                weaponKey,
+                upperHgKey,
+                armorKey
+            };
+            for (int ctr = 0; ctr < keyComboList.Count; ctr++)
+            {
+                LoadKeys(keyComboList[ctr]);
+            }
         }
 
         private void LoadProcesses()
@@ -86,6 +105,34 @@ namespace RothsAutoTull
                    {Keys.F7, "F7"},
                    {Keys.F8, "F8"},
                    {Keys.F9, "F9"},
+                   {Keys.D1, "1"},
+                   {Keys.D2, "2"},
+                   {Keys.D3, "3"},
+                   {Keys.D4, "4"},
+                   {Keys.D5, "5"},
+                   {Keys.D6, "6"},
+                   {Keys.D7, "7"},
+                   {Keys.D8, "8"},
+                   {Keys.D9, "9"},
+                   {Keys.Q, "Q"},
+                   {Keys.W, "W"},
+                   {Keys.E, "E"},
+                   {Keys.R, "R"},
+                   {Keys.T, "T"},
+                   {Keys.Y, "Y"},
+                   {Keys.U, "U"},
+                   {Keys.I, "I"},
+                   {Keys.O, "O"},
+                   {Keys.A, "A"},
+                   {Keys.S, "S"},
+                   {Keys.D, "D"},
+                   {Keys.F, "F"},
+                   {Keys.G, "G"},
+                   {Keys.H, "H"},
+                   {Keys.J, "J"},
+                   {Keys.K, "K"},
+                   {Keys.L, "L"},
+
 
             };
             box.DataSource = new BindingSource(keyboardDictionary, null);
@@ -100,11 +147,17 @@ namespace RothsAutoTull
             Process prc = clientBox.SelectedValue as Process;
             Thread tid1 = new Thread(() => autoPots(prc));
             Thread tid2 = new Thread(() => autoRemoveStatus(prc));
+            Thread tid3 = new Thread(() => autoBuffs(prc));
+            Thread tid4 = new Thread(() => autoEquipShieldWhenBroken(prc));
             tid1.IsBackground = true;
             tid2.IsBackground = true;
+            tid3.IsBackground = true;
+            tid4.IsBackground = true;
             isRunning = true;
             tid1.Start();
             tid2.Start();
+            tid3.Start();
+            tid4.Start();
             startBtn.Enabled = false;
         }
 
@@ -144,13 +197,12 @@ namespace RothsAutoTull
 
                 if (hpPerc < hpPercToPot)
                 {
-                    PostMessage(actualProcess.MainWindowHandle, WM_KEYDOWN, hpKey, 0);
-                    PostMessage(actualProcess.MainWindowHandle, WM_KEYUP, hpKey, 0);
+                    KeyExtension.pressKey(actualProcess, hpKey);
                 }
+
                 if (spPerc < spPercToPot)
                 {
-                    PostMessage(actualProcess.MainWindowHandle, WM_KEYDOWN, spKey, 0);
-                    PostMessage(actualProcess.MainWindowHandle, WM_KEYUP, spKey, 0);
+                    KeyExtension.pressKey(actualProcess, spKey);
                 }
                 Thread.Sleep(1);
             }
@@ -158,7 +210,38 @@ namespace RothsAutoTull
 
         private void autoRemoveStatus(Process actualProcess)
         {
-            int panaceaKey = Convert.ToInt32(panaceaBox.SelectedValue);
+            if (panaceaCheck.Checked)
+            {
+                int panaceaKey = Convert.ToInt32(panaceaBox.SelectedValue);
+                while (true)
+                {
+                    if (!isRunning)
+                    {
+                        break;
+                    }
+                    List<int> buffArr = new List<int>();
+                    populateBuffs(actualProcess, buffArr);
+
+                    if (buffArr.Intersect(DebuffExtension.getPanaceaStatus()).Any())
+                    {
+                        PostMessage(actualProcess.MainWindowHandle, WM_KEYDOWN, panaceaKey, 0);
+                        PostMessage(actualProcess.MainWindowHandle, WM_KEYUP, panaceaKey, 0);
+                    }
+                    buffArr.Clear();
+                    Thread.Sleep(1);
+                }
+            }
+        }
+
+        private void autoBuffs(Process actualProcess)
+        {
+            int fireKey = Convert.ToInt32(fireProofKey.SelectedValue);
+            int earthKey = Convert.ToInt32(earthProofKey.SelectedValue);
+            int coldKey = Convert.ToInt32(coldProofKey.SelectedValue);
+            int thunderKey = Convert.ToInt32(thunderProofKey.SelectedValue);
+            int aloeveraKey = Convert.ToInt32(aloeKey.SelectedValue);
+            int boxOfResentKey = Convert.ToInt32(resentKey.SelectedValue);
+            int holyScrollKey = Convert.ToInt32(holyKey.SelectedValue);
             while (true)
             {
                 if (!isRunning)
@@ -166,24 +249,93 @@ namespace RothsAutoTull
                     break;
                 }
                 List<int> buffArr = new List<int>();
-                int buffStart = 0x010DD284;
-                for (int ctr = 0; ctr <= 120; ctr = ctr + 4)
+                populateBuffs(actualProcess, buffArr);
+
+                if (crusaderBuffEnabled.Checked)
                 {
-                    int buffAddr = buffStart + ctr;
-                    int buffVal = ReadInt32(actualProcess.Handle, buffAddr);
-                    buffArr.Add(buffVal);
+                    int autoGuard = 58;
+                    int reflectShield = 59;
+                    if (!buffArr.Contains(autoGuard))
+                    {
+                        KeyExtension.pressKey(actualProcess, (int)Keys.F4);
+                    }
+                    if (!buffArr.Contains(reflectShield))
+                    {
+                        KeyExtension.pressKey(actualProcess, (int)Keys.F5);
+                    }
                 }
 
-                int silence = 885;
-                int curse = 884;
-                if (buffArr.Contains(silence) || buffArr.Contains(curse))
-                {
-                    PostMessage(actualProcess.MainWindowHandle, WM_KEYDOWN, panaceaKey, 0);
-                    PostMessage(actualProcess.MainWindowHandle, WM_KEYUP, panaceaKey, 0);
-                }
+                pressBuff(actualProcess, fireProofEnabled, buffArr, (int)ItemBuffs.Fireproof, fireKey);
+                pressBuff(actualProcess, coldProofEnabled, buffArr, (int)ItemBuffs.Coldproof, coldKey);
+                pressBuff(actualProcess, earthProofEnabled, buffArr, (int)ItemBuffs.Earthproof, earthKey);
+                pressBuff(actualProcess, thunderProofEnabled, buffArr, (int)ItemBuffs.Thunderproof, thunderKey);
+                pressBuff(actualProcess, aloeEnabled, buffArr, (int)ItemBuffs.Aloevera, aloeveraKey);
+                pressBuff(actualProcess, resentEnabled, buffArr, (int)ItemBuffs.Resentment, boxOfResentKey);
+                pressBuff(actualProcess, holyEnabled, buffArr, (int)ItemBuffs.HolyScroll, holyScrollKey);
+
                 buffArr.Clear();
-                Thread.Sleep(1);
+                Thread.Sleep(10);
             }
         }
+
+        private void pressBuff(Process proc, CheckBox cb, List<int>buffArr, int buffNum, int keyBind)
+        {
+            if (cb.Checked)
+            {
+                if (!buffArr.Contains(buffNum))
+                {
+                    KeyExtension.pressKey(proc, keyBind);
+                }
+            }
+        }
+
+        private void populateBuffs(Process actualProcess, List<int> buffArr)
+        {
+            int buffStart = 0x010DD284;
+            for (int ctr = 0; ctr <= 200; ctr = ctr + 4)
+            {
+                int buffAddr = buffStart + ctr;
+                int buffVal = ReadInt32(actualProcess.Handle, buffAddr);
+                buffArr.Add(buffVal);
+            }
+        }
+
+        private void autoEquipShieldWhenBroken(Process actualProcess)
+        {
+            int shield = Convert.ToInt32(shieldKey.SelectedValue);
+            int weapon = Convert.ToInt32(weaponKey.SelectedValue);
+            int upperHg = Convert.ToInt32(upperHgKey.SelectedValue);
+            int armor = Convert.ToInt32(armorKey.SelectedValue);
+            int shieldAddr = 0x010D9A04;
+            int weaponAddr = 0x010D9684;
+            int upperHgAddr = 0x010D9CA4;
+            int armorAddr = 0x010D9924;
+            while (true)
+            {
+                if (!isRunning)
+                {
+                    break;
+                }
+                equipItemWhenEnabled(actualProcess, shieldAddr, shield, shieldEnabled);
+                equipItemWhenEnabled(actualProcess, weaponAddr, weapon, weaponEnabled);
+                equipItemWhenEnabled(actualProcess, upperHgAddr, upperHg, upperEnabled);
+                equipItemWhenEnabled(actualProcess, armorAddr, armor, armorEnabled);
+                Thread.Sleep(30);
+            }
+        }
+
+        private void equipItemWhenEnabled(Process proc, int equipAddr, int keyBind, CheckBox isEnabled)
+        {
+            if (isEnabled.Checked)
+            {
+                int isEquipped = ReadInt32(proc.Handle, equipAddr);
+                if (isEquipped == 0)
+                {
+                    KeyExtension.pressKey(proc, keyBind);
+                }
+                Thread.Sleep(30);
+            }
+        }
+
     }
 }
