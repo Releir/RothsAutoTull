@@ -28,7 +28,25 @@ namespace KeyHelper
                 "shieldKey",
                 "weaponKey",
                 "upperHgKey",
-                "armorKey"
+                "armorKey",
+                "hp2KeyBox",
+                "hp3KeyBox",
+                "hp4KeyBox",
+                "strKey",
+                "peonyBox",
+                "agiKey",
+                "vitKey",
+                "dexKey",
+                "intKey",
+                "lukKey",
+                "defKey",
+                "mdefKey",
+                "daehKey",
+                "taeKey",
+                "concentKey",
+                "awakeKey",
+                "anodyneKey",
+                "botKey"
             };
 
         [DllImport("user32.dll")]

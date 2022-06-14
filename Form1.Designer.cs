@@ -32,6 +32,23 @@ namespace RothsAutoTull
             this.clientBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.hp4Enable = new System.Windows.Forms.CheckBox();
+            this.hp4KeyBox = new System.Windows.Forms.ComboBox();
+            this.hp4Box = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.peonyCheck = new System.Windows.Forms.CheckBox();
+            this.peonyBox = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.hp3Enable = new System.Windows.Forms.CheckBox();
+            this.hp3KeyBox = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.hp3Box = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.hp2Enable = new System.Windows.Forms.CheckBox();
+            this.hp2KeyBox = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.hp2Box = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.panaceaCheck = new System.Windows.Forms.CheckBox();
             this.panaceaBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,6 +63,58 @@ namespace RothsAutoTull
             this.startBtn = new System.Windows.Forms.Button();
             this.stopBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.botEnabled = new System.Windows.Forms.CheckBox();
+            this.botKey = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.anodyneEnabled = new System.Windows.Forms.CheckBox();
+            this.anodyneKey = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.awakeEnabled = new System.Windows.Forms.CheckBox();
+            this.awakeKey = new System.Windows.Forms.ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.concentEnabled = new System.Windows.Forms.CheckBox();
+            this.concentKey = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.taeEnabled = new System.Windows.Forms.CheckBox();
+            this.taeKey = new System.Windows.Forms.ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.daehEnabled = new System.Windows.Forms.CheckBox();
+            this.daehKey = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.defEnabled = new System.Windows.Forms.CheckBox();
+            this.defKey = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.mdefEnabled = new System.Windows.Forms.CheckBox();
+            this.mdefKey = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.lukEnabled = new System.Windows.Forms.CheckBox();
+            this.lukKey = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.intEnabled = new System.Windows.Forms.CheckBox();
+            this.intKey = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.dexEnabled = new System.Windows.Forms.CheckBox();
+            this.dexKey = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.vitEnabled = new System.Windows.Forms.CheckBox();
+            this.vitKey = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.agiEnabled = new System.Windows.Forms.CheckBox();
+            this.agiKey = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.strEnabled = new System.Windows.Forms.CheckBox();
+            this.strKey = new System.Windows.Forms.ComboBox();
+            this.StrF = new System.Windows.Forms.Label();
+            this.speedEnabled = new System.Windows.Forms.CheckBox();
+            this.speedKey = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cursedEnabled = new System.Windows.Forms.CheckBox();
+            this.cursedKey = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.holyEnabled = new System.Windows.Forms.CheckBox();
             this.holyKey = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -80,14 +149,17 @@ namespace RothsAutoTull
             this.armorEnabled = new System.Windows.Forms.CheckBox();
             this.armorKey = new System.Windows.Forms.ComboBox();
             this.saveKeyBtn = new System.Windows.Forms.Button();
-            this.cursedEnabled = new System.Windows.Forms.CheckBox();
-            this.cursedKey = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.speedEnabled = new System.Windows.Forms.CheckBox();
-            this.speedKey = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.archerBuffEnabled = new System.Windows.Forms.CheckBox();
+            this.sageBuffsEnabled = new System.Windows.Forms.CheckBox();
+            this.enableChaseWalk = new System.Windows.Forms.CheckBox();
+            this.enableRejectSword = new System.Windows.Forms.CheckBox();
+            this.enableWhitesmith = new System.Windows.Forms.CheckBox();
+            this.enableAntiStrip = new System.Windows.Forms.CheckBox();
+            this.enableStarGlad = new System.Windows.Forms.CheckBox();
+            this.autoCloak = new System.Windows.Forms.CheckBox();
+            this.autoSinx = new System.Windows.Forms.CheckBox();
+            this.autoLK = new System.Windows.Forms.CheckBox();
+            this.autoNinja = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +184,23 @@ namespace RothsAutoTull
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.hp4Enable);
+            this.groupBox1.Controls.Add(this.hp4KeyBox);
+            this.groupBox1.Controls.Add(this.hp4Box);
+            this.groupBox1.Controls.Add(this.label39);
+            this.groupBox1.Controls.Add(this.peonyCheck);
+            this.groupBox1.Controls.Add(this.peonyBox);
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.hp3Enable);
+            this.groupBox1.Controls.Add(this.hp3KeyBox);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.hp3Box);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.hp2Enable);
+            this.groupBox1.Controls.Add(this.hp2KeyBox);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.hp2Box);
+            this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.panaceaCheck);
             this.groupBox1.Controls.Add(this.panaceaBox);
             this.groupBox1.Controls.Add(this.label4);
@@ -125,10 +214,221 @@ namespace RothsAutoTull
             this.groupBox1.Controls.Add(this.hpLabel);
             this.groupBox1.Location = new System.Drawing.Point(14, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 135);
+            this.groupBox1.Size = new System.Drawing.Size(552, 135);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auto Pots";
+            // 
+            // hp4Enable
+            // 
+            this.hp4Enable.AutoSize = true;
+            this.hp4Enable.Location = new System.Drawing.Point(528, 118);
+            this.hp4Enable.Name = "hp4Enable";
+            this.hp4Enable.Size = new System.Drawing.Size(15, 14);
+            this.hp4Enable.TabIndex = 27;
+            this.hp4Enable.UseVisualStyleBackColor = true;
+            // 
+            // hp4KeyBox
+            // 
+            this.hp4KeyBox.FormattingEnabled = true;
+            this.hp4KeyBox.Location = new System.Drawing.Point(381, 115);
+            this.hp4KeyBox.Name = "hp4KeyBox";
+            this.hp4KeyBox.Size = new System.Drawing.Size(121, 23);
+            this.hp4KeyBox.TabIndex = 26;
+            // 
+            // hp4Box
+            // 
+            this.hp4Box.FormattingEnabled = true;
+            this.hp4Box.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100"});
+            this.hp4Box.Location = new System.Drawing.Point(313, 115);
+            this.hp4Box.Name = "hp4Box";
+            this.hp4Box.Size = new System.Drawing.Size(62, 23);
+            this.hp4Box.TabIndex = 25;
+            this.hp4Box.Text = "100";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(278, 118);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(29, 15);
+            this.label39.TabIndex = 24;
+            this.label39.Text = "HP4";
+            this.label39.Click += new System.EventHandler(this.label39_Click);
+            // 
+            // peonyCheck
+            // 
+            this.peonyCheck.AutoSize = true;
+            this.peonyCheck.Location = new System.Drawing.Point(463, 88);
+            this.peonyCheck.Name = "peonyCheck";
+            this.peonyCheck.Size = new System.Drawing.Size(68, 19);
+            this.peonyCheck.TabIndex = 23;
+            this.peonyCheck.Text = "Enabled";
+            this.peonyCheck.UseVisualStyleBackColor = true;
+            // 
+            // peonyBox
+            // 
+            this.peonyBox.FormattingEnabled = true;
+            this.peonyBox.Location = new System.Drawing.Point(327, 86);
+            this.peonyBox.Name = "peonyBox";
+            this.peonyBox.Size = new System.Drawing.Size(121, 23);
+            this.peonyBox.TabIndex = 22;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(279, 89);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(40, 15);
+            this.label23.TabIndex = 21;
+            this.label23.Text = "Peony";
+            // 
+            // hp3Enable
+            // 
+            this.hp3Enable.AutoSize = true;
+            this.hp3Enable.Location = new System.Drawing.Point(528, 51);
+            this.hp3Enable.Name = "hp3Enable";
+            this.hp3Enable.Size = new System.Drawing.Size(15, 14);
+            this.hp3Enable.TabIndex = 20;
+            this.hp3Enable.UseVisualStyleBackColor = true;
+            // 
+            // hp3KeyBox
+            // 
+            this.hp3KeyBox.FormattingEnabled = true;
+            this.hp3KeyBox.Location = new System.Drawing.Point(400, 50);
+            this.hp3KeyBox.Name = "hp3KeyBox";
+            this.hp3KeyBox.Size = new System.Drawing.Size(121, 23);
+            this.hp3KeyBox.TabIndex = 19;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(377, 49);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(17, 15);
+            this.label21.TabIndex = 18;
+            this.label21.Text = "%";
+            // 
+            // hp3Box
+            // 
+            this.hp3Box.FormattingEnabled = true;
+            this.hp3Box.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100"});
+            this.hp3Box.Location = new System.Drawing.Point(313, 46);
+            this.hp3Box.Name = "hp3Box";
+            this.hp3Box.Size = new System.Drawing.Size(62, 23);
+            this.hp3Box.TabIndex = 17;
+            this.hp3Box.Text = "100";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(278, 50);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 15);
+            this.label22.TabIndex = 16;
+            this.label22.Text = "HP3";
+            // 
+            // hp2Enable
+            // 
+            this.hp2Enable.AutoSize = true;
+            this.hp2Enable.Location = new System.Drawing.Point(528, 26);
+            this.hp2Enable.Name = "hp2Enable";
+            this.hp2Enable.Size = new System.Drawing.Size(15, 14);
+            this.hp2Enable.TabIndex = 15;
+            this.hp2Enable.UseVisualStyleBackColor = true;
+            // 
+            // hp2KeyBox
+            // 
+            this.hp2KeyBox.FormattingEnabled = true;
+            this.hp2KeyBox.Location = new System.Drawing.Point(400, 21);
+            this.hp2KeyBox.Name = "hp2KeyBox";
+            this.hp2KeyBox.Size = new System.Drawing.Size(121, 23);
+            this.hp2KeyBox.TabIndex = 14;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(377, 24);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(17, 15);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "%";
+            // 
+            // hp2Box
+            // 
+            this.hp2Box.FormattingEnabled = true;
+            this.hp2Box.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100"});
+            this.hp2Box.Location = new System.Drawing.Point(313, 21);
+            this.hp2Box.Name = "hp2Box";
+            this.hp2Box.Size = new System.Drawing.Size(62, 23);
+            this.hp2Box.TabIndex = 12;
+            this.hp2Box.Text = "100";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(278, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(29, 15);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "HP2";
             // 
             // panaceaCheck
             // 
@@ -164,6 +464,7 @@ namespace RothsAutoTull
             this.spKeyBox.Name = "spKeyBox";
             this.spKeyBox.Size = new System.Drawing.Size(121, 23);
             this.spKeyBox.TabIndex = 7;
+            this.spKeyBox.SelectedIndexChanged += new System.EventHandler(this.spKeyBox_SelectedIndexChanged);
             // 
             // hpKeyBox
             // 
@@ -289,6 +590,50 @@ namespace RothsAutoTull
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.botEnabled);
+            this.groupBox2.Controls.Add(this.botKey);
+            this.groupBox2.Controls.Add(this.label38);
+            this.groupBox2.Controls.Add(this.anodyneEnabled);
+            this.groupBox2.Controls.Add(this.anodyneKey);
+            this.groupBox2.Controls.Add(this.label37);
+            this.groupBox2.Controls.Add(this.awakeEnabled);
+            this.groupBox2.Controls.Add(this.awakeKey);
+            this.groupBox2.Controls.Add(this.label36);
+            this.groupBox2.Controls.Add(this.concentEnabled);
+            this.groupBox2.Controls.Add(this.concentKey);
+            this.groupBox2.Controls.Add(this.label35);
+            this.groupBox2.Controls.Add(this.taeEnabled);
+            this.groupBox2.Controls.Add(this.taeKey);
+            this.groupBox2.Controls.Add(this.label34);
+            this.groupBox2.Controls.Add(this.daehEnabled);
+            this.groupBox2.Controls.Add(this.daehKey);
+            this.groupBox2.Controls.Add(this.label33);
+            this.groupBox2.Controls.Add(this.defEnabled);
+            this.groupBox2.Controls.Add(this.defKey);
+            this.groupBox2.Controls.Add(this.label32);
+            this.groupBox2.Controls.Add(this.mdefEnabled);
+            this.groupBox2.Controls.Add(this.mdefKey);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.label30);
+            this.groupBox2.Controls.Add(this.label31);
+            this.groupBox2.Controls.Add(this.lukEnabled);
+            this.groupBox2.Controls.Add(this.lukKey);
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.intEnabled);
+            this.groupBox2.Controls.Add(this.intKey);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.dexEnabled);
+            this.groupBox2.Controls.Add(this.dexKey);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.vitEnabled);
+            this.groupBox2.Controls.Add(this.vitKey);
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.agiEnabled);
+            this.groupBox2.Controls.Add(this.agiKey);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.strEnabled);
+            this.groupBox2.Controls.Add(this.strKey);
+            this.groupBox2.Controls.Add(this.StrF);
             this.groupBox2.Controls.Add(this.speedEnabled);
             this.groupBox2.Controls.Add(this.speedKey);
             this.groupBox2.Controls.Add(this.label18);
@@ -322,10 +667,462 @@ namespace RothsAutoTull
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(12, 200);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(565, 325);
+            this.groupBox2.Size = new System.Drawing.Size(798, 325);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Item Buffs";
+            // 
+            // botEnabled
+            // 
+            this.botEnabled.AutoSize = true;
+            this.botEnabled.Location = new System.Drawing.Point(718, 257);
+            this.botEnabled.Name = "botEnabled";
+            this.botEnabled.Size = new System.Drawing.Size(15, 14);
+            this.botEnabled.TabIndex = 76;
+            this.botEnabled.UseVisualStyleBackColor = true;
+            // 
+            // botKey
+            // 
+            this.botKey.FormattingEnabled = true;
+            this.botKey.Location = new System.Drawing.Point(612, 253);
+            this.botKey.Name = "botKey";
+            this.botKey.Size = new System.Drawing.Size(69, 23);
+            this.botKey.TabIndex = 75;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(521, 258);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(27, 15);
+            this.label38.TabIndex = 74;
+            this.label38.Text = "BoT";
+            // 
+            // anodyneEnabled
+            // 
+            this.anodyneEnabled.AutoSize = true;
+            this.anodyneEnabled.Location = new System.Drawing.Point(718, 228);
+            this.anodyneEnabled.Name = "anodyneEnabled";
+            this.anodyneEnabled.Size = new System.Drawing.Size(15, 14);
+            this.anodyneEnabled.TabIndex = 73;
+            this.anodyneEnabled.UseVisualStyleBackColor = true;
+            // 
+            // anodyneKey
+            // 
+            this.anodyneKey.FormattingEnabled = true;
+            this.anodyneKey.Location = new System.Drawing.Point(612, 224);
+            this.anodyneKey.Name = "anodyneKey";
+            this.anodyneKey.Size = new System.Drawing.Size(69, 23);
+            this.anodyneKey.TabIndex = 72;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(521, 229);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(55, 15);
+            this.label37.TabIndex = 71;
+            this.label37.Text = "Anodyne";
+            // 
+            // awakeEnabled
+            // 
+            this.awakeEnabled.AutoSize = true;
+            this.awakeEnabled.Location = new System.Drawing.Point(718, 199);
+            this.awakeEnabled.Name = "awakeEnabled";
+            this.awakeEnabled.Size = new System.Drawing.Size(15, 14);
+            this.awakeEnabled.TabIndex = 70;
+            this.awakeEnabled.UseVisualStyleBackColor = true;
+            // 
+            // awakeKey
+            // 
+            this.awakeKey.FormattingEnabled = true;
+            this.awakeKey.Location = new System.Drawing.Point(612, 195);
+            this.awakeKey.Name = "awakeKey";
+            this.awakeKey.Size = new System.Drawing.Size(69, 23);
+            this.awakeKey.TabIndex = 69;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(521, 200);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(66, 15);
+            this.label36.TabIndex = 68;
+            this.label36.Text = "Awakening";
+            // 
+            // concentEnabled
+            // 
+            this.concentEnabled.AutoSize = true;
+            this.concentEnabled.Location = new System.Drawing.Point(718, 173);
+            this.concentEnabled.Name = "concentEnabled";
+            this.concentEnabled.Size = new System.Drawing.Size(15, 14);
+            this.concentEnabled.TabIndex = 67;
+            this.concentEnabled.UseVisualStyleBackColor = true;
+            // 
+            // concentKey
+            // 
+            this.concentKey.FormattingEnabled = true;
+            this.concentKey.Location = new System.Drawing.Point(612, 169);
+            this.concentKey.Name = "concentKey";
+            this.concentKey.Size = new System.Drawing.Size(69, 23);
+            this.concentKey.TabIndex = 66;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(521, 174);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(52, 15);
+            this.label35.TabIndex = 65;
+            this.label35.Text = "Concent";
+            // 
+            // taeEnabled
+            // 
+            this.taeEnabled.AutoSize = true;
+            this.taeEnabled.Location = new System.Drawing.Point(718, 144);
+            this.taeEnabled.Name = "taeEnabled";
+            this.taeEnabled.Size = new System.Drawing.Size(15, 14);
+            this.taeEnabled.TabIndex = 64;
+            this.taeEnabled.UseVisualStyleBackColor = true;
+            // 
+            // taeKey
+            // 
+            this.taeKey.FormattingEnabled = true;
+            this.taeKey.Location = new System.Drawing.Point(612, 140);
+            this.taeKey.Name = "taeKey";
+            this.taeKey.Size = new System.Drawing.Size(69, 23);
+            this.taeKey.TabIndex = 63;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(521, 145);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(92, 15);
+            this.label34.TabIndex = 62;
+            this.label34.Text = "Taecheongdong";
+            // 
+            // daehEnabled
+            // 
+            this.daehEnabled.AutoSize = true;
+            this.daehEnabled.Location = new System.Drawing.Point(718, 117);
+            this.daehEnabled.Name = "daehEnabled";
+            this.daehEnabled.Size = new System.Drawing.Size(15, 14);
+            this.daehEnabled.TabIndex = 61;
+            this.daehEnabled.UseVisualStyleBackColor = true;
+            // 
+            // daehKey
+            // 
+            this.daehKey.FormattingEnabled = true;
+            this.daehKey.Location = new System.Drawing.Point(612, 113);
+            this.daehKey.Name = "daehKey";
+            this.daehKey.Size = new System.Drawing.Size(69, 23);
+            this.daehKey.TabIndex = 60;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(521, 118);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(76, 15);
+            this.label33.TabIndex = 59;
+            this.label33.Text = "Daehwandan";
+            // 
+            // defEnabled
+            // 
+            this.defEnabled.AutoSize = true;
+            this.defEnabled.Location = new System.Drawing.Point(718, 83);
+            this.defEnabled.Name = "defEnabled";
+            this.defEnabled.Size = new System.Drawing.Size(15, 14);
+            this.defEnabled.TabIndex = 58;
+            this.defEnabled.UseVisualStyleBackColor = true;
+            // 
+            // defKey
+            // 
+            this.defKey.FormattingEnabled = true;
+            this.defKey.Location = new System.Drawing.Point(612, 79);
+            this.defKey.Name = "defKey";
+            this.defKey.Size = new System.Drawing.Size(69, 23);
+            this.defKey.TabIndex = 57;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(521, 84);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(42, 15);
+            this.label32.TabIndex = 56;
+            this.label32.Text = "BigDef";
+            // 
+            // mdefEnabled
+            // 
+            this.mdefEnabled.AutoSize = true;
+            this.mdefEnabled.Location = new System.Drawing.Point(718, 50);
+            this.mdefEnabled.Name = "mdefEnabled";
+            this.mdefEnabled.Size = new System.Drawing.Size(15, 14);
+            this.mdefEnabled.TabIndex = 55;
+            this.mdefEnabled.UseVisualStyleBackColor = true;
+            // 
+            // mdefKey
+            // 
+            this.mdefKey.FormattingEnabled = true;
+            this.mdefKey.Location = new System.Drawing.Point(612, 46);
+            this.mdefKey.Name = "mdefKey";
+            this.mdefKey.Size = new System.Drawing.Size(69, 23);
+            this.mdefKey.TabIndex = 54;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(707, 21);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(49, 15);
+            this.label24.TabIndex = 53;
+            this.label24.Text = "Enabled";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(635, 21);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(26, 15);
+            this.label30.TabIndex = 52;
+            this.label30.Text = "Key";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(521, 51);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(52, 15);
+            this.label31.TabIndex = 51;
+            this.label31.Text = "BigMdef";
+            // 
+            // lukEnabled
+            // 
+            this.lukEnabled.AutoSize = true;
+            this.lukEnabled.Location = new System.Drawing.Point(474, 265);
+            this.lukEnabled.Name = "lukEnabled";
+            this.lukEnabled.Size = new System.Drawing.Size(15, 14);
+            this.lukEnabled.TabIndex = 50;
+            this.lukEnabled.UseVisualStyleBackColor = true;
+            // 
+            // lukKey
+            // 
+            this.lukKey.FormattingEnabled = true;
+            this.lukKey.Location = new System.Drawing.Point(362, 263);
+            this.lukKey.Name = "lukKey";
+            this.lukKey.Size = new System.Drawing.Size(69, 23);
+            this.lukKey.TabIndex = 49;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(271, 268);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(32, 15);
+            this.label29.TabIndex = 48;
+            this.label29.Text = "LukF";
+            // 
+            // intEnabled
+            // 
+            this.intEnabled.AutoSize = true;
+            this.intEnabled.Location = new System.Drawing.Point(474, 236);
+            this.intEnabled.Name = "intEnabled";
+            this.intEnabled.Size = new System.Drawing.Size(15, 14);
+            this.intEnabled.TabIndex = 47;
+            this.intEnabled.UseVisualStyleBackColor = true;
+            // 
+            // intKey
+            // 
+            this.intKey.FormattingEnabled = true;
+            this.intKey.Location = new System.Drawing.Point(362, 234);
+            this.intKey.Name = "intKey";
+            this.intKey.Size = new System.Drawing.Size(69, 23);
+            this.intKey.TabIndex = 46;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(271, 239);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(27, 15);
+            this.label28.TabIndex = 45;
+            this.label28.Text = "IntF";
+            // 
+            // dexEnabled
+            // 
+            this.dexEnabled.AutoSize = true;
+            this.dexEnabled.Location = new System.Drawing.Point(474, 207);
+            this.dexEnabled.Name = "dexEnabled";
+            this.dexEnabled.Size = new System.Drawing.Size(15, 14);
+            this.dexEnabled.TabIndex = 44;
+            this.dexEnabled.UseVisualStyleBackColor = true;
+            // 
+            // dexKey
+            // 
+            this.dexKey.FormattingEnabled = true;
+            this.dexKey.Location = new System.Drawing.Point(362, 205);
+            this.dexKey.Name = "dexKey";
+            this.dexKey.Size = new System.Drawing.Size(69, 23);
+            this.dexKey.TabIndex = 43;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(271, 210);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(33, 15);
+            this.label27.TabIndex = 42;
+            this.label27.Text = "DexF";
+            // 
+            // vitEnabled
+            // 
+            this.vitEnabled.AutoSize = true;
+            this.vitEnabled.Location = new System.Drawing.Point(474, 178);
+            this.vitEnabled.Name = "vitEnabled";
+            this.vitEnabled.Size = new System.Drawing.Size(15, 14);
+            this.vitEnabled.TabIndex = 41;
+            this.vitEnabled.UseVisualStyleBackColor = true;
+            // 
+            // vitKey
+            // 
+            this.vitKey.FormattingEnabled = true;
+            this.vitKey.Location = new System.Drawing.Point(362, 176);
+            this.vitKey.Name = "vitKey";
+            this.vitKey.Size = new System.Drawing.Size(69, 23);
+            this.vitKey.TabIndex = 40;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(271, 181);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(27, 15);
+            this.label26.TabIndex = 39;
+            this.label26.Text = "VitF";
+            // 
+            // agiEnabled
+            // 
+            this.agiEnabled.AutoSize = true;
+            this.agiEnabled.Location = new System.Drawing.Point(474, 149);
+            this.agiEnabled.Name = "agiEnabled";
+            this.agiEnabled.Size = new System.Drawing.Size(15, 14);
+            this.agiEnabled.TabIndex = 38;
+            this.agiEnabled.UseVisualStyleBackColor = true;
+            // 
+            // agiKey
+            // 
+            this.agiKey.FormattingEnabled = true;
+            this.agiKey.Location = new System.Drawing.Point(362, 147);
+            this.agiKey.Name = "agiKey";
+            this.agiKey.Size = new System.Drawing.Size(69, 23);
+            this.agiKey.TabIndex = 37;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(271, 152);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(31, 15);
+            this.label25.TabIndex = 36;
+            this.label25.Text = "AgiF";
+            // 
+            // strEnabled
+            // 
+            this.strEnabled.AutoSize = true;
+            this.strEnabled.Location = new System.Drawing.Point(474, 120);
+            this.strEnabled.Name = "strEnabled";
+            this.strEnabled.Size = new System.Drawing.Size(15, 14);
+            this.strEnabled.TabIndex = 35;
+            this.strEnabled.UseVisualStyleBackColor = true;
+            // 
+            // strKey
+            // 
+            this.strKey.FormattingEnabled = true;
+            this.strKey.Location = new System.Drawing.Point(362, 118);
+            this.strKey.Name = "strKey";
+            this.strKey.Size = new System.Drawing.Size(69, 23);
+            this.strKey.TabIndex = 34;
+            // 
+            // StrF
+            // 
+            this.StrF.AutoSize = true;
+            this.StrF.Location = new System.Drawing.Point(271, 123);
+            this.StrF.Name = "StrF";
+            this.StrF.Size = new System.Drawing.Size(27, 15);
+            this.StrF.TabIndex = 33;
+            this.StrF.Text = "StrF";
+            // 
+            // speedEnabled
+            // 
+            this.speedEnabled.AutoSize = true;
+            this.speedEnabled.Location = new System.Drawing.Point(474, 84);
+            this.speedEnabled.Name = "speedEnabled";
+            this.speedEnabled.Size = new System.Drawing.Size(15, 14);
+            this.speedEnabled.TabIndex = 32;
+            this.speedEnabled.UseVisualStyleBackColor = true;
+            // 
+            // speedKey
+            // 
+            this.speedKey.FormattingEnabled = true;
+            this.speedKey.Location = new System.Drawing.Point(362, 82);
+            this.speedKey.Name = "speedKey";
+            this.speedKey.Size = new System.Drawing.Size(69, 23);
+            this.speedKey.TabIndex = 31;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(271, 87);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 15);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "SpeedPots";
+            // 
+            // cursedEnabled
+            // 
+            this.cursedEnabled.AutoSize = true;
+            this.cursedEnabled.Location = new System.Drawing.Point(474, 48);
+            this.cursedEnabled.Name = "cursedEnabled";
+            this.cursedEnabled.Size = new System.Drawing.Size(15, 14);
+            this.cursedEnabled.TabIndex = 29;
+            this.cursedEnabled.UseVisualStyleBackColor = true;
+            // 
+            // cursedKey
+            // 
+            this.cursedKey.FormattingEnabled = true;
+            this.cursedKey.Location = new System.Drawing.Point(362, 46);
+            this.cursedKey.Name = "cursedKey";
+            this.cursedKey.Size = new System.Drawing.Size(69, 23);
+            this.cursedKey.TabIndex = 28;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(457, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(49, 15);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Enabled";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(385, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(26, 15);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Key";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(271, 51);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 15);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "CursedWater";
             // 
             // holyEnabled
             // 
@@ -628,81 +1425,132 @@ namespace RothsAutoTull
             this.saveKeyBtn.UseVisualStyleBackColor = true;
             this.saveKeyBtn.Click += new System.EventHandler(this.saveKeyBtn_Click);
             // 
-            // cursedEnabled
+            // archerBuffEnabled
             // 
-            this.cursedEnabled.AutoSize = true;
-            this.cursedEnabled.Location = new System.Drawing.Point(474, 48);
-            this.cursedEnabled.Name = "cursedEnabled";
-            this.cursedEnabled.Size = new System.Drawing.Size(15, 14);
-            this.cursedEnabled.TabIndex = 29;
-            this.cursedEnabled.UseVisualStyleBackColor = true;
+            this.archerBuffEnabled.AutoSize = true;
+            this.archerBuffEnabled.Location = new System.Drawing.Point(341, 32);
+            this.archerBuffEnabled.Name = "archerBuffEnabled";
+            this.archerBuffEnabled.Size = new System.Drawing.Size(129, 19);
+            this.archerBuffEnabled.TabIndex = 17;
+            this.archerBuffEnabled.Text = "Enable Archer Buffs";
+            this.archerBuffEnabled.UseVisualStyleBackColor = true;
             // 
-            // cursedKey
+            // sageBuffsEnabled
             // 
-            this.cursedKey.FormattingEnabled = true;
-            this.cursedKey.Location = new System.Drawing.Point(362, 46);
-            this.cursedKey.Name = "cursedKey";
-            this.cursedKey.Size = new System.Drawing.Size(69, 23);
-            this.cursedKey.TabIndex = 28;
+            this.sageBuffsEnabled.AutoSize = true;
+            this.sageBuffsEnabled.Location = new System.Drawing.Point(484, 9);
+            this.sageBuffsEnabled.Name = "sageBuffsEnabled";
+            this.sageBuffsEnabled.Size = new System.Drawing.Size(119, 19);
+            this.sageBuffsEnabled.TabIndex = 18;
+            this.sageBuffsEnabled.Text = "Enable Sage Buffs";
+            this.sageBuffsEnabled.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // enableChaseWalk
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(457, 21);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 15);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Enabled";
+            this.enableChaseWalk.AutoSize = true;
+            this.enableChaseWalk.Location = new System.Drawing.Point(484, 31);
+            this.enableChaseWalk.Name = "enableChaseWalk";
+            this.enableChaseWalk.Size = new System.Drawing.Size(125, 19);
+            this.enableChaseWalk.TabIndex = 19;
+            this.enableChaseWalk.Text = "Enable Chase Walk";
+            this.enableChaseWalk.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // enableRejectSword
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(385, 21);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 15);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "Key";
+            this.enableRejectSword.AutoSize = true;
+            this.enableRejectSword.Location = new System.Drawing.Point(609, 8);
+            this.enableRejectSword.Name = "enableRejectSword";
+            this.enableRejectSword.Size = new System.Drawing.Size(132, 19);
+            this.enableRejectSword.TabIndex = 20;
+            this.enableRejectSword.Text = "Enable Reject Sword";
+            this.enableRejectSword.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // enableWhitesmith
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(271, 51);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 15);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "CursedWater";
+            this.enableWhitesmith.AutoSize = true;
+            this.enableWhitesmith.Location = new System.Drawing.Point(574, 537);
+            this.enableWhitesmith.Name = "enableWhitesmith";
+            this.enableWhitesmith.Size = new System.Drawing.Size(117, 19);
+            this.enableWhitesmith.TabIndex = 21;
+            this.enableWhitesmith.Text = "Whitesmith buffs";
+            this.enableWhitesmith.UseVisualStyleBackColor = true;
             // 
-            // speedEnabled
+            // enableAntiStrip
             // 
-            this.speedEnabled.AutoSize = true;
-            this.speedEnabled.Location = new System.Drawing.Point(474, 84);
-            this.speedEnabled.Name = "speedEnabled";
-            this.speedEnabled.Size = new System.Drawing.Size(15, 14);
-            this.speedEnabled.TabIndex = 32;
-            this.speedEnabled.UseVisualStyleBackColor = true;
+            this.enableAntiStrip.AutoSize = true;
+            this.enableAntiStrip.Location = new System.Drawing.Point(440, 537);
+            this.enableAntiStrip.Name = "enableAntiStrip";
+            this.enableAntiStrip.Size = new System.Drawing.Size(73, 19);
+            this.enableAntiStrip.TabIndex = 22;
+            this.enableAntiStrip.Text = "AutoFCP";
+            this.enableAntiStrip.UseVisualStyleBackColor = true;
             // 
-            // speedKey
+            // enableStarGlad
             // 
-            this.speedKey.FormattingEnabled = true;
-            this.speedKey.Location = new System.Drawing.Point(362, 82);
-            this.speedKey.Name = "speedKey";
-            this.speedKey.Size = new System.Drawing.Size(69, 23);
-            this.speedKey.TabIndex = 31;
+            this.enableStarGlad.AutoSize = true;
+            this.enableStarGlad.Location = new System.Drawing.Point(574, 562);
+            this.enableStarGlad.Name = "enableStarGlad";
+            this.enableStarGlad.Size = new System.Drawing.Size(102, 19);
+            this.enableStarGlad.TabIndex = 23;
+            this.enableStarGlad.Text = "Star glad buffs";
+            this.enableStarGlad.UseVisualStyleBackColor = true;
             // 
-            // label18
+            // autoCloak
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(271, 87);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 15);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "SpeedPots";
+            this.autoCloak.AutoSize = true;
+            this.autoCloak.Location = new System.Drawing.Point(440, 562);
+            this.autoCloak.Name = "autoCloak";
+            this.autoCloak.Size = new System.Drawing.Size(85, 19);
+            this.autoCloak.TabIndex = 24;
+            this.autoCloak.Text = "Auto Cloak";
+            this.autoCloak.UseVisualStyleBackColor = true;
+            // 
+            // autoSinx
+            // 
+            this.autoSinx.AutoSize = true;
+            this.autoSinx.Location = new System.Drawing.Point(440, 587);
+            this.autoSinx.Name = "autoSinx";
+            this.autoSinx.Size = new System.Drawing.Size(106, 19);
+            this.autoSinx.TabIndex = 25;
+            this.autoSinx.Text = "Other Sinx Buff";
+            this.autoSinx.UseVisualStyleBackColor = true;
+            // 
+            // autoLK
+            // 
+            this.autoLK.AutoSize = true;
+            this.autoLK.Location = new System.Drawing.Point(574, 587);
+            this.autoLK.Name = "autoLK";
+            this.autoLK.Size = new System.Drawing.Size(69, 19);
+            this.autoLK.TabIndex = 26;
+            this.autoLK.Text = "LK Buffs";
+            this.autoLK.UseVisualStyleBackColor = true;
+            // 
+            // autoNinja
+            // 
+            this.autoNinja.AutoSize = true;
+            this.autoNinja.Location = new System.Drawing.Point(699, 537);
+            this.autoNinja.Name = "autoNinja";
+            this.autoNinja.Size = new System.Drawing.Size(79, 19);
+            this.autoNinja.TabIndex = 27;
+            this.autoNinja.Text = "Ninja Buff";
+            this.autoNinja.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 567);
+            this.ClientSize = new System.Drawing.Size(844, 649);
+            this.Controls.Add(this.autoNinja);
+            this.Controls.Add(this.autoLK);
+            this.Controls.Add(this.autoSinx);
+            this.Controls.Add(this.autoCloak);
+            this.Controls.Add(this.enableStarGlad);
+            this.Controls.Add(this.enableAntiStrip);
+            this.Controls.Add(this.enableWhitesmith);
+            this.Controls.Add(this.enableRejectSword);
+            this.Controls.Add(this.enableChaseWalk);
+            this.Controls.Add(this.sageBuffsEnabled);
+            this.Controls.Add(this.archerBuffEnabled);
             this.Controls.Add(this.saveKeyBtn);
             this.Controls.Add(this.armorKey);
             this.Controls.Add(this.armorEnabled);
@@ -722,6 +1570,7 @@ namespace RothsAutoTull
             this.Controls.Add(this.clientBox);
             this.Name = "Form1";
             this.Text = "RGB Guild Tool";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -792,6 +1641,78 @@ namespace RothsAutoTull
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox hp2Enable;
+        private System.Windows.Forms.ComboBox hp2KeyBox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox hp2Box;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.CheckBox hp3Enable;
+        private System.Windows.Forms.ComboBox hp3KeyBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox hp3Box;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.CheckBox peonyCheck;
+        private System.Windows.Forms.ComboBox peonyBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.CheckBox archerBuffEnabled;
+        private System.Windows.Forms.CheckBox strEnabled;
+        private System.Windows.Forms.ComboBox strKey;
+        private System.Windows.Forms.Label StrF;
+        private System.Windows.Forms.CheckBox lukEnabled;
+        private System.Windows.Forms.ComboBox lukKey;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.CheckBox intEnabled;
+        private System.Windows.Forms.ComboBox intKey;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.CheckBox dexEnabled;
+        private System.Windows.Forms.ComboBox dexKey;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.CheckBox vitEnabled;
+        private System.Windows.Forms.ComboBox vitKey;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.CheckBox agiEnabled;
+        private System.Windows.Forms.ComboBox agiKey;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.CheckBox daehEnabled;
+        private System.Windows.Forms.ComboBox daehKey;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.CheckBox defEnabled;
+        private System.Windows.Forms.ComboBox defKey;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.CheckBox mdefEnabled;
+        private System.Windows.Forms.ComboBox mdefKey;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.CheckBox botEnabled;
+        private System.Windows.Forms.ComboBox botKey;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.CheckBox anodyneEnabled;
+        private System.Windows.Forms.ComboBox anodyneKey;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.CheckBox awakeEnabled;
+        private System.Windows.Forms.ComboBox awakeKey;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.CheckBox concentEnabled;
+        private System.Windows.Forms.ComboBox concentKey;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.CheckBox taeEnabled;
+        private System.Windows.Forms.ComboBox taeKey;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.CheckBox sageBuffsEnabled;
+        private System.Windows.Forms.CheckBox enableChaseWalk;
+        private System.Windows.Forms.CheckBox enableRejectSword;
+        private System.Windows.Forms.CheckBox enableWhitesmith;
+        private System.Windows.Forms.CheckBox enableAntiStrip;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.CheckBox hp4Enable;
+        private System.Windows.Forms.ComboBox hp4KeyBox;
+        private System.Windows.Forms.ComboBox hp4Box;
+        private System.Windows.Forms.CheckBox enableStarGlad;
+        private System.Windows.Forms.CheckBox autoCloak;
+        private System.Windows.Forms.CheckBox autoSinx;
+        private System.Windows.Forms.CheckBox autoLK;
+        private System.Windows.Forms.CheckBox autoNinja;
     }
 }
 
